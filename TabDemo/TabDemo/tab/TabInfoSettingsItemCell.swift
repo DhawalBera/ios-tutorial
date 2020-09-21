@@ -30,22 +30,22 @@ class TabInfoSettingsItemCell: UICollectionViewCell {
         
         circleView.asCircle()
         
-        //reorderImageView.isUserInteractionEnabled = true
-        //let gesture = UILongPressGestureRecognizer(target:self, action: #selector(longPressGesture))
-        //gesture.minimumPressDuration = 0
-        //reorderImageView.addGestureRecognizer(gesture)
+        reorderImageView.isUserInteractionEnabled = true
+        let gesture = UILongPressGestureRecognizer(target:self, action: #selector(longPressGesture))
+        gesture.minimumPressDuration = 0
+        reorderImageView.addGestureRecognizer(gesture)
     }
     
-    //@objc func longPressGesture(gesture: UILongPressGestureRecognizer) {
-    //    switch(gesture.state) {
-    //    case UIGestureRecognizerState.began:
-    //        reorderDelegate?.began(gesture)
-    //    case UIGestureRecognizerState.changed:
-    //        reorderDelegate?.changed(gesture)
-    //    case UIGestureRecognizerState.ended:
-    //        reorderDelegate?.end(gesture)
-    //    default:
-    //        reorderDelegate?.cancel(gesture)
-    //    }
-    //}
+    @objc func longPressGesture(gesture: UILongPressGestureRecognizer) {
+        switch(gesture.state) {
+        case UIGestureRecognizerState.began:
+            reorderDelegate?.began(gesture)
+        case UIGestureRecognizerState.changed:
+            reorderDelegate?.changed(gesture)
+        case UIGestureRecognizerState.ended:
+            reorderDelegate?.end(gesture)
+        default:
+            reorderDelegate?.cancel(gesture)
+        }
+    }
 }
