@@ -46,10 +46,10 @@ class TabInfoSettingsController: UIViewController, TabInfoable {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let gesture = UILongPressGestureRecognizer(target:self, action: #selector(longPressGesture))
+        //let gesture = UILongPressGestureRecognizer(target:self, action: #selector(longPressGesture))
         // Mimic short tap. But this blocks the events for delete button and text field :-(
-        gesture.minimumPressDuration = 0
-        collectionView.addGestureRecognizer(gesture)
+        //gesture.minimumPressDuration = 0
+        //collectionView.addGestureRecognizer(gesture)
     }
     
     @objc func longPressGesture(gesture: UILongPressGestureRecognizer) {
