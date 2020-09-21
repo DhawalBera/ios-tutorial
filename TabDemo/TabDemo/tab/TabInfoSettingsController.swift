@@ -207,7 +207,7 @@ extension TabInfoSettingsController: ReorderDelegate {
     
     func changed(_ gesture: UILongPressGestureRecognizer) {
         print("==changed==")
-        collectionView?.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
+        collectionView?.updateInteractiveMovementTargetPosition(gesture.location(in: collectionView))
     }
     
     func end(_ gesture: UILongPressGestureRecognizer) {
